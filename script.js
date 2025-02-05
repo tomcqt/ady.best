@@ -43,3 +43,19 @@ function nextFrame(pos) {
     "</span>";
   block = "";
 }
+
+var url = 'https://raw.githubusercontent.com/tomcqt/adyOS/refs/heads/prod/os/version';
+var storedText;
+
+fetch(url)
+  .then(function(response) {
+    response.text().then(function(text) {
+      storedText = text;
+      done();
+    });
+  });
+
+function done() {
+  document.getElementById('__10').innerText =
+    storedText;
+}
