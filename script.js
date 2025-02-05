@@ -56,6 +56,6 @@ fetch(url)
   });
 
 function done() {
-  document.getElementById('__10').innerText =
-    storedText;
+  document.getElementById('__10').innerText = storedText;
+  alert(storedText);
 }
