@@ -48,5 +48,5 @@ fetch('https://raw.githubusercontent.com/tomcqt/adyOS/refs/heads/prod/os/version
   .then((response) => response.text().then(yourCallback));
 
 function yourCallback( retrievedText ) {
-  document.getElementById("__10").innerHTML = retrievedText;
+  document.getElementById("__10").innerHTML = "Version " + retrievedText;
 }
