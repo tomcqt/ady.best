@@ -47,8 +47,7 @@ function nextFrame(pos) {
 var url = 'https://raw.githubusercontent.com/tomcqt/adyOS/refs/heads/prod/os/version';
 var storedText;
 
-fetch(url)
-  .then(function(response) {
+fetch(url).then(function(response) {
     response.text().then(function(text) {
       storedText = text;
       done();
@@ -56,6 +55,6 @@ fetch(url)
   });
 
 function done() {
-  document.getElementById('__10').innerText = storedText;
+  document.getElementById('__10').innerHTML = storedText;
   alert(storedText);
 }
