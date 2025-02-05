@@ -368,7 +368,8 @@ body ::-webkit-scrollbar {
   display: flex;
   position: absolute;
   top: 144px;
-  left: calc(50% - 47px);
+  left: 50%;
+  transform: translate(-50%, 0);
   overflow: hidden;
 }
 #Frame_16:after {
