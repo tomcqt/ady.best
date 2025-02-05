@@ -1,6 +1,6 @@
 var theLetters =
   "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890~!@#$%^&*-=_+\\|;:'\",<>./"; //You can customize what letters it will cycle through
-var ctnt = "adyOS"; // Your text goes here
+var ctnt = "adyOS_"; // Your text goes here
 var speed = 35; // ms per frame
 var increment = 10; // frames per step. Must be >2
 
