@@ -44,17 +44,9 @@ function nextFrame(pos) {
   block = "";
 }
 
-var url = 'https://raw.githubusercontent.com/tomcqt/adyOS/refs/heads/prod/os/version';
-var storedText;
+fetch('https://raw.githubusercontent.com/tomcqt/adyOS/refs/heads/prod/os/version')
+  .then((response) => response.text().then(yourCallback));
 
-fetch(url).then(function(response) {
-    response.text().then(function(text) {
-      storedText = text;
-      done();
-    });
-  });
-
-function done() {
-  document.getElementById('__10').innerHTML = storedText;
-  alert(storedText);
+function yourCallback( retrievedText ) {
+  document.getElementById("__10").innerHTML = retrievedText;
 }
